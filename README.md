@@ -1,3 +1,3 @@
-# top-caesar-cipher
+# top-ruby
 
-A caesar cipher created for The Odin Project
+Basic programming projects using Ruby for The Odin Project
