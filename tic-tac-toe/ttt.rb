@@ -1,8 +1,3 @@
-#Build a tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns.
-#Think about how you would set up the different elements within the game...What should be a class? Instance variable? Method? A few minutes of thought can save you from wasting an hour of coding.
-#Build your game, taking care to not share information between classes any more than you have to.
-#Post your solution below
-
 class Board
   def initialize
     @board = Array.new(3) { Array.new(3, ' ') }
@@ -22,9 +17,9 @@ class Board
 
   def winner?(mark)
     @board.any? { |row| row.all?(mark) } ||
-    @board.transpose.any? { |col| col.all?(mark) } ||
-    [@board[0][0], @board[1][1], @board[2][2]].all?(mark) ||
-    [@board[0][2], @board[1][1], @board[2][0]].all?(mark)
+      @board.transpose.any? { |col| col.all?(mark) } ||
+      [@board[0][0], @board[1][1], @board[2][2]].all?(mark) ||
+      [@board[0][2], @board[1][1], @board[2][0]].all?(mark)
   end
 end
 
